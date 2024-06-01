@@ -15,5 +15,7 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-    }
+    },
+    "root": true
 };
+
