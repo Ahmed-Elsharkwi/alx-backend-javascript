@@ -5,6 +5,6 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
   return Promise
     .allSettled([signUpUser(firstName, lastName), uploadPhoto(fileName)])
     .then((res) => {
-	return res
+	let res_1 = res
     });
 }
