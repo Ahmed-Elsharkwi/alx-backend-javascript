@@ -1,9 +1,12 @@
-export default function cleanSet(set, startString) {
+export default function cleanSet(set, startString='') {
   let ind
   let string = ''
   let w = ''
   let i = 0
-  for (let word of set){
+  for (let word of set) {
+    if (word === undefined || word === null) {
+      continue;  // Skip this iteration if word is undefined or null
+    }
     ind = false
     let iter = 0
     for (let letter of startString) {
