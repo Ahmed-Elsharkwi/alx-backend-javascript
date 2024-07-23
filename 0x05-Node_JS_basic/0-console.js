@@ -3,8 +3,8 @@
  * @param {String} msg The message to display.
  * @author Bezaleel Olakunori <https://github.com/B3zaleel>
  */
-function displayMessage (string) {
+const displayMessage = (string) => {
   console.log(string);
-}
+};
 
 module.exports = displayMessage;
