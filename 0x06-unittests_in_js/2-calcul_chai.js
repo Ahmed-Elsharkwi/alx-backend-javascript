@@ -1,4 +1,4 @@
-const calculateNumber = (type, a, b) => {
+const calculateNumber = (a, b, type) => {
   a = Math.round(a);
   b = Math.round(b);
   if (type == "SUM") {
