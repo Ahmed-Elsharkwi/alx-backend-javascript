@@ -10,3 +10,16 @@ describe('testing api', () => {
       });
     });
 });
+describe('testing api', () => {
+    it('welcome to system', () => {
+      request('http://127.0.0.1:7865/6', (error, response, body) => {
+        expect(response.statusCode).to.equal(200);
+      });
+    });
+    it('welcome to system', () => {
+      request('http://127.0.0.1:7865/ahmed', (error, response, body) => {
+        expect(response.statusCode).to.equal(404);
+      });
+    });
+
+});
