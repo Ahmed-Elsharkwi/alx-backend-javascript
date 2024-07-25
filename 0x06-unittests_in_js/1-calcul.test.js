@@ -17,6 +17,10 @@ describe("calculateNumber", function() {
   });
 
   it("checks equality", function() {
+    assert.equal(calculateNumber(1.5, 5.5, "SUBTRACT"), 4);
+  });
+
+  it("checks equality", function() {
     assert.equal(calculateNumber(-4.5, 5.0, "SUBTRACT"), 9);
   });
 
@@ -31,6 +35,14 @@ describe("calculateNumber", function() {
 
   it("checks equality", function() {
    assert.equal(calculateNumber(4.4999999, 0.5, "DIVIDE"), 4);
+  });
+
+  it("checks equality", function() {
+    assert.equal(calculateNumber(5.6, 1.7, "DIVIDE"), 3);
+  });
+
+  it("checks equality", function() {
+    assert.equal(calculateNumber(1.0, 0, "DIVIDE"), "Error");
   });
 
 });
