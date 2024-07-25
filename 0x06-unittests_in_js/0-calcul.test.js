@@ -3,18 +3,26 @@ const assert = require("assert")
 
 var result = 0;
 
-result = calculateNumber(4.5, 5.5);
-assert( result == 11)
+describe("calculateNumber", function() {
+  it("checks equality", function() {
+    assert.equal(calculateNumber(4.5, 5.5), 11);
+  });
 
-result = calculateNumber(-1.5, -2.5);
-assert( result == -3);
+  it("checks equality", function() {
+    assert.equal(calculateNumber(-2.5, -3.5), -5);
+  });
 
-result = calculateNumber(9, 5);
-assert( result == 14)
+  it("checks equality", function() {
+    assert.equal(calculateNumber(1.5, 5), 7);
+  });
 
-result = calculateNumber(1.5, 5)
-assert ( result == 7)
+  it("checks equality", function() {
+    assert.equal(calculateNumber(4.5, 5), 10);
+  });
+
+  it("checks equality", function() {
+    assert.equal(calculateNumber(4, 5), 9);
+  });
 
 
-result = calculateNumber(2, 5.5)
-assert (result == 8)
+});
