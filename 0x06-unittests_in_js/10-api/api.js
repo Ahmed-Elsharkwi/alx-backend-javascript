@@ -1,0 +1,25 @@
+const express = require('express')
+const app = express()
+app.use(express.json());
+// respond with "hello world" when a GET request is made to the homepage
+const port = 7865;
+app.listen(port, () => {
+  console.log(`App available on localhost port ${port}`);
+});
+
+app.get('/', (req, res) => {
+   res.send('Welcome to the payment system');
+});
+
+app.get('/cart/:id([0-9]+)', (req, res) => {
+   res.send(`Payment methods for cart ${req.params.id}`)
+});
+
+app.get('/available_payments', (req, res) => {
+   res.json({payment_methods: {credit_cards: true,paypal: false}})
+});
+
+app.post('/login', (req, res) => {
+   data = req.body
+   res.send(`Welcome ${data.userName}`)
+});
