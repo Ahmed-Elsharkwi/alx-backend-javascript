@@ -13,16 +13,24 @@ describe("calculateNumber", function() {
   });
 
   it("checks equality", function() {
-    assert.equal(calculateNumber(1.5, 5), 7);
+    assert.equal(calculateNumber(1.0, 5.5), 7);
   });
 
   it("checks equality", function() {
-    assert.equal(calculateNumber(4.5, 5), 10);
+    assert.equal(calculateNumber(4.5, 5.0), 10);
   });
 
   it("checks equality", function() {
     assert.equal(calculateNumber(4, 5), 9);
   });
 
+  it("checks equality", function() {
+   assert.equal(calculateNumber(1.0, 2.0), 3);
+  });
+
+
+  it("checks equality", function() {
+   assert.equal(calculateNumber(4.4999999, 5.49999999), 9);
+  });
 
 });
