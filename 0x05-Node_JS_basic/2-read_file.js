@@ -1,6 +1,12 @@
 const fs = require('node:fs');
 
 const countStudents = (path) => {
+ if (!fs.existsSync(path)) {
+    throw new Error('Cannot load the database');
+  }
+  if (!fs.statSync(path).isFile()) {
+    throw new Error('Cannot load the database');
+  }
  fs.createReadStream(path, { encoding: "utf-8" })
   .on("data", (data) => {
     var count = -1
@@ -51,8 +57,5 @@ const countStudents = (path) => {
 	process.stdout.write("\n");
     }
   })
-  .on("error", (error) => {
-    console.error('Cannot load the database');
-  });
 }
 module.exports = countStudents
